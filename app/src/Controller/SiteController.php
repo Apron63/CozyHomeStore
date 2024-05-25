@@ -11,8 +11,6 @@ class SiteController extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
-        return $this->render('site/homepage.html.twig', [
-            'controller_name' => 'SiteController',
-        ]);
+        return $this->render('site/homepage.html.twig');
     }
 }

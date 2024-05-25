@@ -4,7 +4,7 @@
 
 {% block body %}
     {% if app.user %}
-        Welcome, {{ app.user.email }}
+        <div {{ vue_component('Hello', { 'name': app.user.email }) }}></div>
         <a href="{{ path('app_logout') }}">Logout</a>
     {% else %}
         Please,
