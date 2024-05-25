@@ -1,0 +1,7 @@
+/src/node_modules/
+
+docker-compose.override.yml
+php_run.sh
+/src/env.local
+
+/.vscode/

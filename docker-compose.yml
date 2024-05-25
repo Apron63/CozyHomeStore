@@ -1,0 +1,61 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: memsheets_nginx
+    restart: unless-stopped
+    environment:
+      - VIRTUAL_HOST=${NGINX_HOST}
+      - FASTCGI_READ_TIMEOUT=${FASTCGI_READ_TIMEOUT:-60s}
+    volumes:
+      - .:/var/www/html:delegated
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - php-fpm
+    # ports:
+    #   - "80:80"
+    networks:
+      - default
+
+  php-fpm:
+    restart: unless-stopped
+    container_name: memsheets_php
+    build:
+      context: ./docker/php
+      args:
+        - INSTALL_XDEBUG=${INSTALL_XDEBUG}
+    working_dir: /var/www/html/app
+    volumes:
+      - .:/var/www/html:delegated
+      - ../../.composer:/var/www/.composer
+    environment:
+      - TZ=${TZ}
+      - PHP_IDE_CONFIG=serverName="Docker"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - db
+    networks:
+      - default
+
+  db:
+    image: mysql:latest
+    restart: unless-stopped
+    container_name: memsheets_db
+    command: --innodb-flush-method=fsync --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - dbstorage:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      TZ: ${TZ}
+    ports:
+      - "3306:3306"
+    networks:
+      - default
+
+volumes:
+  dbstorage:
