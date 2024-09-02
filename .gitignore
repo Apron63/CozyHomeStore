@@ -6,3 +6,5 @@
 docker-compose.override.yml
 /app/php_run.sh
 /app/src/env.local
+.env
+./docker-compose.override.yml

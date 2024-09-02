@@ -30,12 +30,12 @@ class CreateAdminCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        //$admin = $this->userRepository->findOneBy(['login' => 'admin']);
+        $admin = $this->userRepository->findOneBy(['login' => 'admin']);
 
-        // if ($admin instanceof User) {
-        //     $output->writeln('Учетная запись admin уже существует!');
-        //     return Command::FAILURE;
-        // }
+        if ($admin instanceof User) {
+            $output->writeln('Учетная запись admin уже существует!');
+            return Command::FAILURE;
+        }
 
         $output->writeln('Создаем пользователя...');
         $admin = new User();

@@ -3,6 +3,9 @@
 {% block title %}Homepage{% endblock %}
 
 {% block body %}
+
+    <h1>Главная страница</h1>
+
     {% if app.user %}
         <div {{ vue_component('Hello', { 'name': app.user.email }) }}></div>
         <a href="{{ path('app_logout') }}">Logout</a>
