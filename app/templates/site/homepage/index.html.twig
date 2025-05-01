@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Медико-фармацевтическое объединение{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <header class="header-banner">
+            <a href="./"> <img src="images/logo.png" id="logo" ></a>
+            <img src="images/menu_humburger.png" id="menu-humburger-icon" >
+
+            <?php include 'blocks/menu_humburger.php'; ?>
+
+            <div class="clear">
+                <div class=' row text-banner'>
+                    <div class='banner-item active' style='width: 600px; '>
+                        <p>
+                            <span class='big'>Давайте расти<br></span>
+                            <span style='font-size: 80px;line-height:0.5; '>вместе!</span>
+                        </p>
+                        <p style='font-size: 25px;'> МФО — независимое<br>объединение
+                            <span class='font-red'>свободных аптечных сетей №1</span>
+                        </p>
+                    </div>
+                    <p class='banner-item'><span class='big'>Мы активно</span> растем и развиваемся <br>уже более 10 лет</p>
+                    <p class='banner-item'><span class='big'>До 29,5 млрд</span> ежемесячного <br>товарооборота</p>
+                    <p class='banner-item'>Охвачено более <br>13 тысяч аптек</p>
+                    <p class='banner-item'>Законтрактуем до <br><span class='big'>95%</span> вашего <br>ассортимента!</p>
+                    <p class='banner-item'>Более <br><span class='big'>80</span> регионов <br>присутствия</p>
+                </div>
+                <a href='about-company' class='nondecor'><button type='button' class='btn btn-green' id='btn-banner'>узнать больше</button></a>
+            </div>
+        </header>
+
+        <div id="clear">
+            {% include 'site/homepage/_auth_block.html.twig' %}
+            {% include 'site/homepage/_custom_block_1.html.twig' %}
+            {% include 'site/homepage/_custom_block_2.html.twig' %}
+            {% include 'site/homepage/_custom_block_3.html.twig' %}
+            {% include 'site/homepage/_custom_block_4.html.twig' %}
+            {% include 'site/homepage/_custom_block_5.html.twig' %}
+        <div>
+
+        <div class="row">
+            <h3 class="tcenter font-blue" style="padding: 25px;">О нас говорят</h3>
+        </div>
+
+        <div class="row" style="width: 1000px; margin: 0 auto;">
+            <div class="slider" id="reviews">
+                {% for review in reviews %}
+                    <div class="go">
+                        <img src= "{{ review.thumbinailPicture }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="modal_form" ><!-- Сaмo oкнo -->
+            <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+            <!-- Тут любoе сoдержимoе -->
+            <div style="overflow-y: scroll; width: 100%; height:95%; margin-top: 25px;">
+                <img src="images/reviews/img1.png" class="banner-img" >
+            </div>
+        </div>
+
+        <div id="overlay"></div><!-- Пoдлoжкa -->
+
+        <div class="clear">
+            <h3 class="tcenter font-blue" style="padding: 25px;">Новости</h3>
+        </div>
+
+    </div>
+{% endblock %}

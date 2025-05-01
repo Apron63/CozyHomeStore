@@ -1,2 +1,7 @@
 This is a Simfony 7.0 Skeleton with Webpack & Tailwind CSS.
 Performed a security bundle with login form
+
+Tailwind templates https://github.com/bbulakh/tailwind-ecommerce
+
+Трансляция YAML конфигов в PHP
+vendor/bin/config-transformer

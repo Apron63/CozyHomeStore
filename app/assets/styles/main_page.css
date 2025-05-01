@@ -1,0 +1,212 @@
+header {
+    background: #f0f0f0 url(../images/index-banner.jpg);
+}
+
+.text-banner{
+	font-size: 40px;
+	padding: 100px 0 0 20px;
+	color: #FFFFFF;
+	height: 300px;
+}
+
+.banner-item{
+	display: none;
+	width: 300px;
+}
+.text-banner :first-child {
+	display: block;
+}
+.banner-item span{
+	padding: 0;
+}
+.text-banner .big{
+	font-size: 45px;
+}
+
+#block-banner{
+	margin: 95px 0 0 55px;
+}
+
+#btn-banner{
+	border: 1px solid #5c5b5b;
+	height: 49px;
+	width: 258px;
+	font-weight: bold;
+	margin-left: 55px;
+}
+
+#btn-banner:hover{
+	background-color: #1d593a;
+	opacity: 1;
+}
+
+.news{
+	width: 32%;
+
+}
+
+.news img{
+	width: 100%;
+	height: 165px;
+	object-fit: cover;
+
+}
+
+.new-text{
+	padding: 10px 25px 15px;
+	height: 250px;
+	position:relative;
+
+}
+.new-text h5{
+	height: 75px;
+}
+
+.new-text .footer{
+	position: absolute;
+	bottom: 5px;
+	font-size: 12px;
+}
+
+/*для карусели в баннере*/
+#banner-carusel .slick-prev:before,
+#banner-carusel .slick-next:before{
+font-size: 45px;
+color: #ffffff;
+opacity: 1;
+
+ display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+#banner-carusel .slick-prev,
+#banner-carusel .slick-next{
+	z-index: 2;
+	height: 65px;
+}
+
+#banner-carusel .slick-prev	{
+		left: 10px;
+	}
+
+#banner-carusel .slick-next{
+		right: 10px;
+	}
+
+
+#banner-carusel .slick-dots{
+bottom: -5px;
+}
+#banner-carusel .slick-dots li button:before
+{
+
+
+    font-size: 20px;
+    line-height: 45px;
+}
+
+#reviews .slick-prev:before,
+#reviews .slick-next:before{
+color: #4d8cb7;
+opacity: 1;
+font-size: 45px;
+ display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+
+}
+
+
+
+#reviews .slick-prev,
+#reviews .slick-next{
+	z-index: 2;
+	height: 65px;
+}
+
+
+/*popup*/
+
+#modal_form {
+	width: 900px;
+	height: 700px; /* Рaзмеры дoлжны быть фиксирoвaны */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	top: 50%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	left: 50%; /* пoлoвинa экрaнa слевa */
+	margin-top: -350px;
+	margin-left: -450px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+}
+/* Пoдлoжкa */
+
+#overlay {
+	z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:#000; /* чернaя */
+	opacity:0.8; /* нo немнoгo прoзрaчнa */
+	-moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+	filter:alpha(opacity=80);
+	width:100%;
+	height:100%; /* рaзмерoм вo весь экрaн */
+	top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+	left:0;
+	cursor:pointer;
+	display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+.col50{
+	width: 50%;
+	padding: 20px;
+}
+.col50 h5{
+	padding:20px 0;
+}
+.col50 .txt{
+	background-color: #e2edf3;
+	padding: 50px;
+	border-radius: 15px;
+}
+
+.go:hover{
+	cursor:pointer;
+}
+
+
+.infopartners{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.infopartner{
+	display: inline-block;
+	margin: 10px;
+}
+
+.infopartner img{
+	max-height: 110px;
+	max-width: 250px;
+	object-fit: cover;
+}
+
+

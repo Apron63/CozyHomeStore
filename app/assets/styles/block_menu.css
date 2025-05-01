@@ -1,0 +1,167 @@
+
+.item-block-menu:nth-child(3n){
+	margin-right: 0;
+}
+.item-block-menu{
+	width: 348px;
+	height: 408px;
+	margin: 0 34px 20px 0;
+	border-radius: 55px 55px 55px 0;
+	float: left;
+}
+
+
+.block-menu-img{
+	width: 348px;
+	height: 165px;
+	border-radius: 55px 55px 0 0;
+	overflow:hidden;
+
+}
+
+.block-menu-img img{
+	width: inherit;
+	height: inherit;
+
+}
+
+.block-menu-img .scaling{
+
+-moz-transition: all 700ms ease;
+ -o-transition: all 700ms ease;
+ -webkit-transition: all 700ms ease;
+ transition: all 700ms ease;
+ transform: scale(1);
+
+}
+
+.item-block-coop{
+	width: 240px;
+	height: 470px;
+	margin: 0 19px 20px 19px;
+	border-radius: 55px 55px 55px 0;
+	float: left;
+}
+
+.block-coop-img{
+	width: 240px;
+	height: 114px;
+	border-radius: 55px 55px 0 0;
+	overflow:hidden;
+
+}
+
+.block-coop-img img{
+	width: inherit;
+	height: inherit;
+
+}
+
+.block-coop-img .scaling{
+
+-moz-transition: all 700ms ease;
+ -o-transition: all 700ms ease;
+ -webkit-transition: all 700ms ease;
+ transition: all 700ms ease;
+ transform: scale(1);
+
+}
+
+/* цвет placeholder в вводе*/
+#authorization input {
+	-moz-placeholder-color:  #216fa5;
+	-webkit-input-placeholder-color: #216fa5 ;
+}
+
+
+
+.item-block-menu button{
+	margin-left: 60px;
+}
+.block-menu-main{
+	padding: 15px 0 0 0;
+
+}
+
+.block-menu-main h3{
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 10px;
+
+}
+
+.block-menu-main div{
+	padding: 0 25px;
+	word-wrap: break-word;
+	height: 140px;
+
+
+}
+
+.block-menu-coop{
+	padding: 15px 0 0 0;
+}
+
+.block-menu-coop h3{
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 10px;
+	height: 60px;
+}
+
+.block-menu-coop div{
+	padding: 0 25px;
+	word-wrap: break-word;
+	height: 210px;
+}
+
+/*форма авторизации*/
+#authorization input{
+	background-color: #d1ebfb;
+	border: 1px solid gray;
+	border-radius: 25px;
+	height: 40px;
+	display: block;
+	outline:none;
+	width: 220px;
+	padding: 5px;
+	margin: 5px auto;
+}
+
+
+#authorization form{
+	height: 200px;
+	
+}
+
+#authorization button{
+	width: 160px;
+	margin-left: 95px;
+}
+
+#cabinet-menu{
+	margin: 0 auto;
+	font-size: 20px;
+	padding-left: 55px;
+	//border: 1px solid black;
+}
+
+
+#authorization  #check{
+	width: 15px;
+	height: 15px;
+	display: inline;
+	margin-right: 5px;
+	background-color: #d1ebfb;
+	border: none;
+
+}
+
+#authorization p{
+	width: 220px;
+	margin: 0 auto;
+}
+
+#error-auth{
+	font-size: 14px;
+}

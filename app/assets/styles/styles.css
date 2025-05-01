@@ -1,0 +1,497 @@
+@font-face{
+	font-family: Gothic;
+	src: url(../fonts/CenturyGothic.ttf);
+}
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Gothic, sans-serif;
+
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body{
+	background-color: #f8f8f8;
+	font-size: 16px;
+}
+input, textarea, label{
+	padding: 5px 10px;
+	font-size: 22px;
+}
+#container{
+	margin: 0 auto;
+	width:1112px;
+	background-color: #ffffff;
+
+}
+
+#logo{
+	padding: 10px;
+	width: 150px;
+	height: auto;
+}
+.header-banner{
+	height: 500px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.head{
+	padding: 25px 50px ; font-size: 55px;
+}
+.h3, h3{
+	font-size: 25px;
+}
+.h4, h4{
+	font-size: 22px;
+}
+.h5, h5{
+	font-size: 16px;
+}
+.tcenter{
+	text-align: center;
+}
+.tright{
+	text-align: right;
+}
+
+.tleft{
+	text-align: left;
+}
+
+
+.font-blue{
+	color: #4d8cb7;
+}
+
+.font-white{
+	color: #ffffff;
+}
+
+.font-red{
+	color: red;
+}
+
+.font-gray{
+	color: gray;
+}
+
+/*для вертикального центрирования блоков*/
+.parent {display: table; }
+.child {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+/* для создания новой строки с foat блоками*/
+.row{
+        width: 100%;
+        clear: both;
+    }
+
+/* дочерний элемент чтоб не выпадал из родителя*/
+.clear:after{
+	content: ' ';
+	clear: both;
+	display: block;
+}
+
+a.nondecor{
+	text-decoration: none;
+	color: inherit;
+
+}
+
+.banner-img{
+	width: 100%;
+	height: auto;
+}
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+/*меню гамбургер */
+#menu-humburger-icon{
+	float: right;
+	width: 25px;
+	height: 25px;
+	margin-right: 27px;
+	margin-top: 20px;
+}
+
+#menu-humburger{
+	z-index: 3;
+	opacity: 0.85;
+	display: none;
+	position: relative;
+	top: 45px;
+	right: -52px;
+	float: right;
+	background-color: #ffffff;
+	width: 250px;
+	border-radius: 5px;
+
+}
+
+#menu-humburger .item{
+	padding: 5px;
+	border-bottom: 1px solid #f0f0f0;
+	color: grey;
+
+}
+
+#menu-humburger .item:last-child{
+	border: none;
+}
+
+
+#menu-humburger .item:hover{
+	background-color: #e6f4fd;
+	color: #216fa5;
+	border-radius: inherit;
+}
+
+/*конец стилей меню гамбургер*/
+
+.btn{
+	border: none;
+/* //border: 1px solid black; */
+box-shadow:  0 0 10px rgba(0,0,0,0.2);
+	text-align: center;
+	height: 40px;
+	font-size: 22px;
+	padding: 0 25px;
+	line-height: 40px;
+	border-radius: 25px;
+	outline:none;
+	/*font-weight: bold;*/
+}
+
+.btn:hover{
+	opacity: 0.85;
+}
+
+.btn-blink{
+	opacity: 1;
+	background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+	background-repeat: no-repeat;
+	background-size: 200% 100%, auto;
+	background-position: 200% 0, 0 0;
+}
+
+.btn-blink:active {
+	top: 1px;
+	box-shadow: none;
+}
+.btn-blink.hover {
+	transition: 0.5s linear;
+	background-position: -200% 0, 0 0;
+}
+
+
+.btn-green{
+	background-color: #32a46a;
+	color: #ffffff;
+}
+
+.btn-blue{
+	background-color: #4d8cb7;
+	color: #ffffff;
+}
+
+
+/*стили для подвала*.
+ */
+
+footer{
+	background-color: #e6f4fd;
+	padding-top: 45px;
+	padding-bottom: 25px;
+
+}
+
+
+.menu-footer{
+
+	width: 350px;
+	float: left;
+	padding-left: 50px;
+
+}
+footer h5{
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.item-menu-footer {
+	font-size: 14px;
+	color: #808080;
+	padding: 5px 0;
+}
+#subscribe{
+	font-weight: bold;
+	padding-left: 10px;
+
+}
+
+
+#mailing{
+		margin-top: 40px;
+}
+
+#mailing input,
+#mailing button
+{
+	height: 40px;
+	border: none;
+	display: inline;
+	padding: 10px;
+	outline:none;
+
+}
+
+#mailing input{
+	border-radius: 25px 0 0 25px;
+}
+
+#mailing button
+{
+	border-radius: 0 25px 25px 0;
+	font-size: 18px;
+	border-left: 2px solid white;
+
+
+}
+
+
+.ug{
+	float: right;
+	margin:2px 0 2px 10px;
+	height: 36px;
+
+}
+
+/*стили для ,блока сотрудничество*/
+#partnership{
+	text-align: center;
+	width: 100%;
+}
+
+
+#partnership button{
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+#contacts-left{
+	float: left;
+	padding-left: 20px;
+	padding-bottom: 30px;
+}
+#contacts-left p{
+	padding-top: 20px;
+	width: 350px;
+
+}
+#contacts-right{
+	float: right;
+	width: 550px;
+	padding-right: 50px;
+}
+
+
+#contacts-form input[type='text'], #contacts-form textarea {
+	border-radius: 5px;
+	border: 1px solid gray;
+	background-color: #e8e6e7;
+}
+
+#contacts-form input[type='text']{
+	width: 220px;
+	margin: 10px 0;
+}
+#contacts-form textarea {
+	width: 500px;
+	margin-bottom: 5px;
+	resize: none;
+}
+.politic{
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+.politic input[type='checkbox']{
+	width: 25px;
+	height: 15px;
+	margin: 0;
+}
+.politic label{
+	font-size: 18px;
+}
+
+.politic p{
+	margin-left: 50px;
+	font-size: 20px;
+}
+
+/*цветовая схема блоков*/
+.blue{
+	background-color: #4d8cb7;
+	color: #ffffff;
+}
+
+.light-blue {
+	background-color: #e6f4fd;
+	color: #216fa5;
+}
+.green{
+	background-color: #32a46a;
+	color: #ffffff;
+}
+
+.gray{
+	background-color: #e8e6e7;
+}
+
+.blue button {
+	background-color: #216fa5;
+	color: #ffffff;
+}
+
+.light-blue button {
+	background-color: #d1ebfb;
+	color: #216fa5;
+}
+.green button{
+	background-color: #2f704f;
+	color: #ffffff;
+
+}
+
+/*для наложенных блоков*/
+.level-top{
+	position: relative;
+}
+
+.level-inside{
+	position:absolute;
+	z-index: 2;
+	opacity: 0.99;
+	padding: 10px;
+}
+
+ .btn img{
+	float: right;
+	margin:5px 0 5px 20px;
+	height: 30px;
+}
+
+
+/*///OLEG*/
+/*
+.section{
+
+    height:50px;
+    position: absolute;
+    top: 5px;
+    right:5px;
+    display: flex;
+
+    justify-content: center;
+    align-items: right;
+
+
+}
+.menu-btn{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after
+
+{ content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left:50%;margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color:#222;
+
+}
+.menu-btn span::before,
+.menu-btn span::after{ content: '';
+    display: block;
+    transition:0.5s;
+}
+.menu-btn span::before{
+    transform: translateY(-5px);
+}
+.menu-btn span::after{
+    transform: translateY(5px);
+}
+.menu-btn_active span{height: 0;}
+.menu-btn_active span::before{transform: rotate(45deg);}
+.menu-btn_active span::after{transform: rotate(-45deg);}
+
+.menu-block{
+    display: flex;
+    justify-content: right;
+    align-items:right;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+
+}
+.menu-nav{
+   background-color: #fff;
+   height: 50px;
+   line-height: 50px;
+   padding-left: 20px;
+   padding-right: 40px;
+   margin-right: -25px;
+   border-top-left-radius: 50px;
+   border-bottom-left-radius: 50px;
+
+   font-size: 13px;
+}
+.menu-nav__link{
+    text-decoration: none;
+    color:#000;
+    margin-left: 20px;
+}
+.menu-nav{
+
+    transition:0.5s;
+    transform-origin: right center;
+    transform:  translateX(50%);
+    opacity: 0;
+}
+.menu-nav_active{
+    transform:  translateX(0%);
+    opacity: 1;
+}
+
+*/
