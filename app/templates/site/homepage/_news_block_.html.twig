@@ -1,0 +1,16 @@
+{% for item in news %}
+    <a class="nondecor" href="TODO News Link">
+        <div class="news left blue {% if loop.index is odd %}gray{% else %}blue{% endif %}">
+            <img src="/storage/news/{{ item.bannerUrl }}">
+            <div class="new-text">
+                <h5>{{ item.name }}</h5>
+                <p>{{ item.description }}</p>
+                <div class="footer {% if loop.index is odd %}font-gray{% endif %}">{{ item.date | date('d.m.Y') }}</div>
+            </div>
+        </div>
+    </a>
+
+    {% if not loop.last %}
+        <div class="left" style="width: 2%;">&nbsp;</div>
+    {% endif %}
+ {% endfor %}

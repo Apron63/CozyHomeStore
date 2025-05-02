@@ -6,28 +6,28 @@
     <div id="container">
         <header class="header-banner">
             <a href="./"> <img src="images/logo.png" id="logo" ></a>
-            <img src="images/menu_humburger.png" id="menu-humburger-icon" >
+            <img src="images/menu_humburger.png" id="menu-humburger-icon">
 
-            <?php include 'blocks/menu_humburger.php'; ?>
+            {% include 'site/components/menu_hamburger.html.twig' %}
 
             <div class="clear">
-                <div class=' row text-banner'>
-                    <div class='banner-item active' style='width: 600px; '>
+                <div class="row text-banner">
+                    <div class="banner-item active" style="width: 600px;">
                         <p>
-                            <span class='big'>Давайте расти<br></span>
-                            <span style='font-size: 80px;line-height:0.5; '>вместе!</span>
+                            <span class="big">Давайте расти<br></span>
+                            <span style="font-size: 80px;line-height:0.5;">вместе!</span>
                         </p>
-                        <p style='font-size: 25px;'> МФО — независимое<br>объединение
-                            <span class='font-red'>свободных аптечных сетей №1</span>
+                        <p style="font-size: 25px;"> МФО — независимое<br>объединение
+                            <span class="font-red">свободных аптечных сетей №1</span>
                         </p>
                     </div>
-                    <p class='banner-item'><span class='big'>Мы активно</span> растем и развиваемся <br>уже более 10 лет</p>
-                    <p class='banner-item'><span class='big'>До 29,5 млрд</span> ежемесячного <br>товарооборота</p>
-                    <p class='banner-item'>Охвачено более <br>13 тысяч аптек</p>
-                    <p class='banner-item'>Законтрактуем до <br><span class='big'>95%</span> вашего <br>ассортимента!</p>
-                    <p class='banner-item'>Более <br><span class='big'>80</span> регионов <br>присутствия</p>
+                    <p class="banner-item"><span class="big">Мы активно</span> растем и развиваемся <br>уже более 10 лет</p>
+                    <p class="banner-item"><span class="big">До 29,5 млрд</span> ежемесячного <br>товарооборота</p>
+                    <p class="banner-item">Охвачено более <br>13 тысяч аптек</p>
+                    <p class="banner-item">Законтрактуем до <br><span class="big">95%</span> вашего <br>ассортимента!</p>
+                    <p class="banner-item">Более <br><span class="big">80</span> регионов <br>присутствия</p>
                 </div>
-                <a href='about-company' class='nondecor'><button type='button' class='btn btn-green' id='btn-banner'>узнать больше</button></a>
+                <a href="about-company" class="nondecor"><button type="button" class="btn btn-green" id="btn-banner">узнать больше</button></a>
             </div>
         </header>
 
@@ -66,7 +66,107 @@
 
         <div class="clear">
             <h3 class="tcenter font-blue" style="padding: 25px;">Новости</h3>
+            {% include 'site/homepage/_news_block_.html.twig' %}
         </div>
+
+        <div class="row ">
+            <a class="nondecor right" href="news">
+                <button class="btn btn-blue" style="margin-right:25px; margin-top: 25px;">Больше новостей<img class="ug" src="images/ug2.png"></button>
+            </a>
+        </div>
+
+        <div id="partnership" >
+            <p class="clear"></p>
+            <h1 style="padding-top: 150px;">Хотите с нами сотрудничать?</h1>
+
+            {% if writeDocs is defined %}
+                <div class="documents">
+                    <!--<h5>Документы</h5>-->
+                    <p>
+                        <a href="/storage/documents/ОбразецДоговораМФО.pdf" target="_blank">Образец договора МФО</a>
+                    </p>
+                    <p>
+                        <a href="/storage/documents/Образец Приложения К Договору.pdf" target="_blank">Образец приложения к договору</a>
+                    </p>
+                </div>
+            {% endif %}
+            <p class="h4" style="padding-top: 25px;"> Мы всегда открыты к диалогу. Просто напишите нам.</p>
+            <a class="nondecor" href="cooperation">
+                <button class="btn btn-green">сотрудничество<img class="ug" src="images/ug2.png"></button>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col50 left">
+                <div class="tcenter">
+                    <p>
+                        <a class="nondecor" href="/storage/documents/kodeks_etiki_mfo.pdf" target="blink"><img src="/images/index-pdf.jpg"></a>
+                    </p>
+                    <h5>ЭТИЧЕСКИЙ КОДЕКС</h5>
+                </div>
+                <div class="txt">
+                    В своей деятельности мы всегда
+                    стремились и стремимся к росту
+                    и устойчивому развитию, открытому
+                    и ответственному ведению бизнеса,
+                    обязательному соблюдению всех
+                    стандартов, самому скрупулезному
+                    выполнению всех предъявляемых
+                    требований, высокопрофессиональному
+                    и этическому подходу к нашей
+                    работе.
+                </div>
+            </div>
+            <div class="col50 left">
+                <div class="tcenter">
+                    <p>
+                        <a class='nondecor' href='/storage/documents/antikorupcionnaya_politika.pdf' target='blink'><img src='/images/index-pdf.jpg'></a>
+                    </p>
+                    <h5>АНТИКОРРУПЦИОННАЯ ПОЛИТИКА</h5>
+                </div>
+                <div class="txt">
+                    Антикоррупционная политика отражает
+                    приверженность компании МФО
+                    и ее работников высоким этическим
+                    стандартам, намерению вести открытый
+                    и честный бизнес, совершенствовать
+                    корпоративную культуру, следовать лучшим
+                    практикам корпоративного управления
+                    и поддерживать деловую репутацию
+                    Компании на должном уровне.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h1 class="tcenter" style="padding: 50px 25px 25px;">Наши партнеры</h1>
+        </div>
+        <div class="row" style="width: 1000px; margin: 0 auto;">
+            <div class="slider" id="partners">
+                {% for partner in defaultPartners %}
+                    <div style="width: 160px; height: 90px;">
+                        <img src="/storage/partners/{{ partner.picture }}" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row">
+		    <h1 class="tcenter" style="padding-top: 50px">Информационные партнеры</h1>
+        </div>
+
+        <div class="clear" style="padding-bottom: 75px;">
+            <div class="infopartners">
+                {% for partner in infoPartners %}
+                    <a class="nondecor infopartner" href="{{ partner.link }}" target="blank">
+                        <img src="/storage/partners/{{ partner.picture }}">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include 'site/components/contact.html.twig' %}
+        {% include 'site/components/footer.html.twig' %}
 
     </div>
 {% endblock %}

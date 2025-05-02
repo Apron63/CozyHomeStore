@@ -1,0 +1,37 @@
+<div class="clear">
+    <div id="contacts-left"><h3>Контакты</h3>
+    	<p>
+    		Мы всегда рады обратной связи<br>
+    		Напишите нам через форму справа и мы
+   			обязательно с вами свяжемся
+    	</p>
+
+		<p class="font-gray">АДРЕС</p>
+    	<p>
+    	  197349, г. Санкт-Петербург, пр-кт Испытателей, д. 39, литера А, пом. 9-Н блок С-4-4К, пом. 8
+    	</p>
+
+    	<p class="font-gray">ТЕЛЕФОН</p>
+    	<p>
+    		+7(812) 925-42-68
+    	</p>
+	    <p><br><br></p>
+    </div>
+	<div id="contacts-right">
+		<form id="contacts-form" action="">
+			<input type="text" placeholder="Имя" class="left" name='name'>
+			<input type="text" placeholder="&#9993; E-mail" class="right" name='email'>
+			<textarea cols="70" rows="5"  placeholder="Ваше сообщение" name='msg'></textarea>
+			<div class='politic'>
+				<input type='checkbox' id="politic" name="politic"><label>Я согласен/согласна на обработку данных </label>
+				<p> <a href='/privacy_policy' target='blank'>Политика&nbsp;конфиденциальности</a></p>
+			</div>
+
+			<div style="margin: 0 0 10px 0;" ><input id="val-captcha" type="text" name="norobot" placeholder ="Введите капчу" class="left" style="margin:0;display: block;">
+			<img id="img-captcha" src="php/captcha.php" style="border-radius: 5px; mergin-top: 5px;"></div>
+
+			<p><button type="button" class="btn btn-green" id="btn-contacts" onclick="javascript:message_send();">отправить</button></p>
+		</form>
+	</div>
+</div>
+</script>

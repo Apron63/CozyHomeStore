@@ -6,6 +6,7 @@ namespace App\Entity;
 
 use App\Enum\NewsTypeEnum;
 use App\Repository\NewsRepository;
+use DateTime;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -27,7 +28,7 @@ class News
     private ?string $description = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTime $date = null;
+    private ?DateTime $date = null;
 
     #[ORM\Column(length: 255)]
     private ?string $bannerUrl = null;
@@ -85,12 +86,12 @@ class News
         return $this;
     }
 
-    public function getDate(): ?\DateTime
+    public function getDate(): ?DateTime
     {
         return $this->date;
     }
 
-    public function setDate(\DateTime $date): static
+    public function setDate(DateTime $date): static
     {
         $this->date = $date;
 

@@ -1,0 +1,44 @@
+<footer class="row clear">
+	<div class="menu-footer">
+		{% for item in footerMenu.menu1 %}
+			{% if item.bold %}
+				<h5><a href="{{ item.link }}" class="nondecor">{{ item.name }}</a></h5>
+			{% else %}
+				<p class="item-menu-footer"><a href="{{ item.link }}" class="nondecor">{{ item.name }}</a></p>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	<div class="menu-footer">
+		{% for item in footerMenu.menu2 %}
+			{% if item.bold %}
+				<h5><a href="{{ item.link }}" class="nondecor">{{ item.name }}</a></h5>
+			{% else %}
+				<p class="item-menu-footer"><a href="{{ item.link }}" class="nondecor">{{ item.name }}</a></p>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+    <div id="subscribe">
+        <h5>Подписаться на рассылку</h5>
+        <form id="mailing">
+            <input class="left green" placeholder="E-mail" name="email">
+            <button class="green" type="button" onclick="javascript:mailing();">Отправить</button>
+        </form>
+    </div>
+</footer>
+
+{{ ya_metrika | raw }}
+
+<div style="display: none">
+<!--LiveInternet counter--><script type="text/javascript">
+document.write('<a href="//www.liveinternet.ru/click" '+
+'target="_blank"><img src="//counter.yadro.ru/hit?t45.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';h'+escape(document.title.substring(0,150))+';'+Math.random()+
+'" alt="" title="LiveInternet" '+
+'border="0" width="31" height="31"><\/a>')
+</script><!--/LiveInternet-->
+</div>
