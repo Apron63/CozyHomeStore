@@ -1,11 +1,11 @@
-@font-face{
+@font-face {
 	font-family: Gothic;
 	src: url(../fonts/CenturyGothic.ttf);
 }
 
 
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	font-family: Gothic, sans-serif;
@@ -13,125 +13,150 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-
-body{
-	background-color: #f8f8f8;
+html {
 	font-size: 16px;
 }
-input, textarea, label{
+
+
+body {
+	background-color: #f8f8f8;
+	font-size: 1rem;
+}
+
+input,
+textarea,
+label {
 	padding: 5px 10px;
-	font-size: 22px;
+	font-size: 1.375rem;
 }
-#container{
+
+#container {
 	margin: 0 auto;
-	width:1112px;
+	max-width: 1112px;
+	width: 100%;
 	background-color: #ffffff;
-
 }
 
-#logo{
-	padding: 10px;
+#logo {
+	padding: 0.625rem;
 	width: 150px;
 	height: auto;
 }
-.header-banner{
+
+.header-banner {
 	height: 500px;
-    margin-bottom: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+	margin-bottom: 1.25rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
 }
 
-.head{
-	padding: 25px 50px ; font-size: 55px;
+.head {
+	padding: 1.5625rem 3.125rem;
+	font-size: 3.4375rem;
 }
-.h3, h3{
-	font-size: 25px;
+
+.h3,
+h3 {
+	font-size: 1.5625rem;
 }
-.h4, h4{
-	font-size: 22px;
+
+.h4,
+h4 {
+	font-size: 1.375rem;
 }
-.h5, h5{
-	font-size: 16px;
+
+.h5,
+h5 {
+	font-size: 1rem;
 }
-.tcenter{
+
+.tcenter {
 	text-align: center;
 }
-.tright{
+
+.tright {
 	text-align: right;
 }
 
-.tleft{
+.tleft {
 	text-align: left;
 }
 
 
-.font-blue{
+.font-blue {
 	color: #4d8cb7;
 }
 
-.font-white{
+.font-white {
 	color: #ffffff;
 }
 
-.font-red{
+.font-red {
 	color: red;
 }
 
-.font-gray{
+.font-gray {
 	color: gray;
 }
 
 /*для вертикального центрирования блоков*/
-.parent {display: table; }
+.parent {
+	display: table;
+}
+
 .child {
 	display: table-cell;
 	vertical-align: middle;
 	width: 100%;
 }
+
 /* для создания новой строки с foat блоками*/
-.row{
-        width: 100%;
-        clear: both;
-    }
+.row {
+	width: 100%;
+	clear: both;
+}
 
 /* дочерний элемент чтоб не выпадал из родителя*/
-.clear:after{
+.clear:after {
 	content: ' ';
 	clear: both;
 	display: block;
 }
 
-a.nondecor{
+a.nondecor {
 	text-decoration: none;
 	color: inherit;
 
 }
 
-.banner-img{
+.banner-img {
 	width: 100%;
 	height: auto;
 }
-.left{
+
+.left {
 	float: left;
 }
 
-.right{
+.right {
 	float: right;
 }
+
 /*меню гамбургер */
-#menu-humburger-icon{
+#menu-humburger-icon {
 	float: right;
 	width: 25px;
 	height: 25px;
@@ -139,7 +164,7 @@ a.nondecor{
 	margin-top: 20px;
 }
 
-#menu-humburger{
+#menu-humburger {
 	z-index: 3;
 	opacity: 0.85;
 	display: none;
@@ -153,19 +178,19 @@ a.nondecor{
 
 }
 
-#menu-humburger .item{
+#menu-humburger .item {
 	padding: 5px;
 	border-bottom: 1px solid #f0f0f0;
 	color: grey;
 
 }
 
-#menu-humburger .item:last-child{
+#menu-humburger .item:last-child {
 	border: none;
 }
 
 
-#menu-humburger .item:hover{
+#menu-humburger .item:hover {
 	background-color: #e6f4fd;
 	color: #216fa5;
 	border-radius: inherit;
@@ -173,27 +198,27 @@ a.nondecor{
 
 /*конец стилей меню гамбургер*/
 
-.btn{
+.btn {
 	border: none;
-/* //border: 1px solid black; */
-box-shadow:  0 0 10px rgba(0,0,0,0.2);
+	/* //border: 1px solid black; */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	text-align: center;
 	height: 40px;
-	font-size: 22px;
+	font-size: 1.375rem;
 	padding: 0 25px;
 	line-height: 40px;
 	border-radius: 25px;
-	outline:none;
+	outline: none;
 	/*font-weight: bold;*/
 }
 
-.btn:hover{
+.btn:hover {
 	opacity: 0.85;
 }
 
-.btn-blink{
+.btn-blink {
 	opacity: 1;
-	background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .0) 30%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255, 255, 255, .7) 0%, rgba(255, 255, 255, .5) 50%, rgba(0, 0, 0, 0) 50%);
 	background-repeat: no-repeat;
 	background-size: 200% 100%, auto;
 	background-position: 200% 0, 0 0;
@@ -203,18 +228,19 @@ box-shadow:  0 0 10px rgba(0,0,0,0.2);
 	top: 1px;
 	box-shadow: none;
 }
+
 .btn-blink.hover {
 	transition: 0.5s linear;
 	background-position: -200% 0, 0 0;
 }
 
 
-.btn-green{
+.btn-green {
 	background-color: #32a46a;
 	color: #ffffff;
 }
 
-.btn-blue{
+.btn-blue {
 	background-color: #4d8cb7;
 	color: #ffffff;
 }
@@ -223,7 +249,7 @@ box-shadow:  0 0 10px rgba(0,0,0,0.2);
 /*стили для подвала*.
  */
 
-footer{
+footer {
 	background-color: #e6f4fd;
 	padding-top: 45px;
 	padding-bottom: 25px;
@@ -231,129 +257,137 @@ footer{
 }
 
 
-.menu-footer{
+.menu-footer {
 
 	width: 350px;
 	float: left;
 	padding-left: 50px;
 
 }
-footer h5{
+
+footer h5 {
 	font-weight: bold;
 	margin-bottom: 5px;
 }
+
 .item-menu-footer {
 	font-size: 14px;
 	color: #808080;
 	padding: 5px 0;
 }
-#subscribe{
+
+#subscribe {
 	font-weight: bold;
 	padding-left: 10px;
 
 }
 
 
-#mailing{
-		margin-top: 40px;
+#mailing {
+	margin-top: 40px;
 }
 
 #mailing input,
-#mailing button
-{
+#mailing button {
 	height: 40px;
 	border: none;
 	display: inline;
 	padding: 10px;
-	outline:none;
+	outline: none;
 
 }
 
-#mailing input{
+#mailing input {
 	border-radius: 25px 0 0 25px;
 }
 
-#mailing button
-{
+#mailing button {
 	border-radius: 0 25px 25px 0;
-	font-size: 18px;
+	font-size: 1.125rem;
 	border-left: 2px solid white;
 
 
 }
 
 
-.ug{
+.ug {
 	float: right;
-	margin:2px 0 2px 10px;
+	margin: 2px 0 2px 10px;
 	height: 36px;
 
 }
 
 /*стили для ,блока сотрудничество*/
-#partnership{
+#partnership {
 	text-align: center;
 	width: 100%;
 }
 
 
-#partnership button{
+#partnership button {
 	margin-top: 40px;
 	margin-bottom: 70px;
 }
 
-#contacts-left{
+#contacts-left {
 	float: left;
 	padding-left: 20px;
 	padding-bottom: 30px;
 }
-#contacts-left p{
+
+#contacts-left p {
 	padding-top: 20px;
 	width: 350px;
 
 }
-#contacts-right{
+
+#contacts-right {
 	float: right;
 	width: 550px;
 	padding-right: 50px;
 }
 
 
-#contacts-form input[type='text'], #contacts-form textarea {
+#contacts-form input[type='text'],
+#contacts-form textarea {
 	border-radius: 5px;
 	border: 1px solid gray;
 	background-color: #e8e6e7;
 }
 
-#contacts-form input[type='text']{
+#contacts-form input[type='text'] {
 	width: 220px;
 	margin: 10px 0;
 }
+
 #contacts-form textarea {
 	width: 500px;
 	margin-bottom: 5px;
 	resize: none;
 }
-.politic{
+
+.politic {
 	width: 100%;
 	margin: 0 0 20px 0;
 }
-.politic input[type='checkbox']{
+
+.politic input[type='checkbox'] {
 	width: 25px;
 	height: 15px;
 	margin: 0;
 }
-.politic label{
-	font-size: 18px;
+
+.politic label {
+	font-size: 1.125rem;
 }
 
-.politic p{
+.politic p {
 	margin-left: 50px;
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 /*цветовая схема блоков*/
-.blue{
+.blue {
 	background-color: #4d8cb7;
 	color: #ffffff;
 }
@@ -362,12 +396,13 @@ footer h5{
 	background-color: #e6f4fd;
 	color: #216fa5;
 }
-.green{
+
+.green {
 	background-color: #32a46a;
 	color: #ffffff;
 }
 
-.gray{
+.gray {
 	background-color: #e8e6e7;
 }
 
@@ -380,27 +415,28 @@ footer h5{
 	background-color: #d1ebfb;
 	color: #216fa5;
 }
-.green button{
+
+.green button {
 	background-color: #2f704f;
 	color: #ffffff;
 
 }
 
 /*для наложенных блоков*/
-.level-top{
+.level-top {
 	position: relative;
 }
 
-.level-inside{
-	position:absolute;
+.level-inside {
+	position: absolute;
 	z-index: 2;
 	opacity: 0.99;
 	padding: 10px;
 }
 
- .btn img{
+.btn img {
 	float: right;
-	margin:5px 0 5px 20px;
+	margin: 5px 0 5px 20px;
 	height: 30px;
 }
 
