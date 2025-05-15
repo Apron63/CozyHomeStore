@@ -8,6 +8,7 @@ use App\Service\Common\OptionsService;
 use App\Service\Site\ComponentFooterService;
 use App\Service\Site\HomepageService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
@@ -20,7 +21,7 @@ final class HomepageController extends AbstractController
     ) {}
 
     #[Route('/', name: 'app_homepage')]
-    public function __invoke(): Response
+    public function __invoke(Request $request): Response
     {
         $partners = $this->homepageService->getPartners();
 
@@ -31,6 +32,7 @@ final class HomepageController extends AbstractController
             'infoPartners' => $partners['infoPartners'],
             'footerMenu' => $this->componentFooterService->getContactMeny(),
             'ya_metrika' => $this->optionsService->getOption('ya_metrika'),
+            'authError' => $request->get('auth_error', ''),
         ]);
     }
 }

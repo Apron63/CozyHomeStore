@@ -2,7 +2,7 @@
     <div class="block-menu-img "><img src="images/authorization.jpg" class="scaling"></div>
     <div class="block-menu-main">
         <h3>Авторизация</h3>
-        <?php
+        {# <?php
             if($_REQUEST['manager_exit']==1) {
                 session_destroy();
                 unset($_SESSION);
@@ -39,7 +39,29 @@
                 ";
                 unset($_SESSION['error']);
             }
-        ?>
+        ?> #}
+        {% if app.user is null %}
+            <form id="form-auth" method="POST" action="{{ path('app_login') }}" enctype="application/x-www-form-urlencoded">
+                <div>
+                    <input type="text" name="login" id="login" placeholder="логин">
+                    <input type="password" name="password" id="password" placeholder="пароль">
+                    <!--<p><input type='checkbox' id='check' name='check' value='1'><span>Чужой компьютер?</span></p>-->
+                    {% if authError is not null %}
+                        <span id="error-auth" class="font-red">
+                            {{ authError }}
+                            &nbsp;
+                        </span>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-blink">Войти</button>
+            </form>
+        {% elseif app.user.roles.0 == 'ROLE_USER' or app.user.reles.0 == 'ROLE_BRAND' %}
+            <div id="cabinet-menu"><a href="{{ path('cabinet_homepage') }}">Перейти в личный кабинет</a></div>
+            <a href="{{ path('app_logout') }}"><button type="submit" class="btn btn-blink">Выход</button></a>
+        {% elseif app.user.roles.0 == 'ROLE_MULTI' %}
+            <div id="cabinet-menu"><a href="manager_account/index.php">Перейти в личный кабинет</a></div>
+            <a href="{{ path('app_logout') }}"><button type="submit" class="btn btn-blink">Выход</button></a>
+        {% endif %}
 
     </div>
 </div>

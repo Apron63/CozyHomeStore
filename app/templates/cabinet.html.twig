@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta keywords="">
+        <meta description="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('cabinet') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('cabinet') }}
+        {% endblock %}
+    </head>
+    <a href="#" class="scrollup">Наверх</a>
+    <body>
+        {% include 'cabinet/components/header.html.twig' %}
+        {% block body %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<div class="wrapper block-contacts">
+	<p class="str-manager">
+        {% if user.name == 'Менеджер АС' and user.name != 'МенеджерАС' %}
+            <span class="lab">Ваш менеджер: </span>"{{ user.name }}
+            <span class="lab">, телефон: </span><span>{{ user.phone }}</span>\n";
+            <span class="lab">, e-mail: </span><span>{{ user.email }}</span>\n";
+        {% endif %}
+	</p>
+	<div class="row">
+		<form class="form-contacts" autocomplete=off id="contact-form">
+			<div class="col-5">
+				<input type="hidden" name="func" value="sendmsg">
+				<input name="name" id="name" placeholder="Ваше имя *" required>
+				<input name="email" id="email" placeholder="Ваш email" required>
+				<input name="phone" id="phone" placeholder="Ваш телефон *" required>
+			</div>
+			<div class="col-7">
+				<textarea name="msg" id="msg" placeholder="Ваше сообщение *"  rows="7" required ></textarea>
+			</div>
+			<div class="col-12">
+				<button type="button" class="btn" onclick="javascript:send_message();">Отправить</button>
+			</div>
+		</form>
+	</div>
+</div>

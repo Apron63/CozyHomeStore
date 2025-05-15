@@ -7,7 +7,7 @@
         <meta name="keywords" content="Медико-фармацевтическое объединение, маркетинговое объединение МФО, аптечная ассоциация МФО,  главная страница МФО, МФО о нас, МФО сотрудничество, МФО карьера, МФО пресса о нас, МФО новости, МФО контакты, МФО партнеры, фармкомпании Санкт-Петербурга,ассоциация аптек МФО, ассоциация МФО, аптечная ассоциация МФО официальный сайт, объединения аптек спб, МФО фрм спб, 7(812)925-42-68, аптечное партнерство МФО" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}

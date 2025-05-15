@@ -1,0 +1,22 @@
+{% extends 'cabinet.html.twig' %}
+
+{% block title %}Кабинет Медико-фармацевтическое объединение{% endblock %}
+
+{% block body %}
+    <div class='content'>
+
+        {% include 'cabinet/homepage/_brand.html.twig' %}
+        {% include 'cabinet/homepage/_contact.html.twig' %}
+
+
+
+        {# <?php
+        if($role == 'brand' || $role == "producer" || $role=='multi'){
+            include "index_brand.php";
+            include 'form_contact.php';
+        } elseif($role == 'pharmacy'){
+            include "index_pharma.php";
+        }
+        ?> #}
+    </div>
+{% endblock %}
