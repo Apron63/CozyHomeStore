@@ -1,0 +1,36 @@
+{% extends 'cabinet.html.twig' %}
+
+{% block title %}Кабинет Медико-фармацевтическое объединение{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="wrapper">
+	        <div class="row">
+                <div class="subMenu">
+                    <a href="{{ path('cabinet_pharma_statistic') }}" class="item-subMenu active">РАСЧЕТ ВЫПОЛНЕНИЯ АС</a>
+                    <a href="#" class="item-subMenu" style="color: grey; border-color: grey;">ВЫКЛАДКА и НТЗ</a>
+                    <a href="{{ path('cabinet_pharma_statistic_list_goods') }}" class="item-subMenu">Список номенклатуры</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <a class="downloadReport" href="{{ path('cabinet_pharma_statistic_download', {reportPeriod: reportPeriod}) }}" download>Скачать </a>
+            <div>
+
+	        <div class="row qflex">
+                <a class="nondecor" href="?report=prev">
+                    <div class="prevQ {% if reportPeriod == 'prev' %}activQ{% endif %}" data="prev">прошлый квартал</div>
+                </a> 
+                <div class="quarterNum"><?php if ($quarter!='' and $year!='') echo "$quarter квартал $year г.";?></div>
+                <a class='nondecor' href="?report=curr">
+                    <div class="currQ {% if reportPeriod == 'curr' %}activQ{% endif %}" data="curr">текущий квартал</div>
+                </a>
+            </div>
+
+            <a href="pharma_statistic_full.php" class="type_report">Полный отчет</a>
+
+            {% include 'cabinet/pharma_statistic/_table.html.twig' %}
+
+        </div>
+    </div>
+{% endblock %}

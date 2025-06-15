@@ -2,6 +2,7 @@
 /.idea/
 
 /app/node_modules/
+/source/
 
 docker-compose.override.yml
 /app/php_run.sh

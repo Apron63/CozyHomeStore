@@ -1,0 +1,23 @@
+<table class="report" cellspacing=0 >
+    <tr>
+        <th></th>
+        <th>Производитель / Группа</th>
+        <th>План</th>
+        <th>Факт</th>
+        <th>% выполнения</th>
+        <th>{% if app.user.login == "testAS" %}Требуется до выполнения плана{% else %}Требуется закупить{% endif %}</th>
+        <th>Факт месяц1</th>
+        <th>Факт месяц2</th>
+        <th>Факт месяц3</th>
+        <th>Возможный бонус при выполнении плана</th>
+    </tr>
+
+    <tr class="itog">
+        <td colspan=2 width="30%">ИТОГО</td>
+    </tr>
+
+</table>
+
+{% macro input(name, value, type = "text", size = 20) %}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value|e }}" size="{{ size }}"/>
+{% endmacro %}

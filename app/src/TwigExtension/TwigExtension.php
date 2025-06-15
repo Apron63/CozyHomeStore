@@ -35,7 +35,7 @@ class TwigExtension extends AbstractExtension
 
         $breadcrumbs[0] = [
             'name' => $pageName,
-            'link' => 'index.php',
+            'link' => '/',
         ];
 
         if($curPage != '' && $curPage !="index" ){

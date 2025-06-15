@@ -1,0 +1,42 @@
+{% extends 'cabinet.html.twig' %}
+
+{% block title %}Кабинет Медико-фармацевтическое объединение{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="wrapper page-listgoods">
+            <div class="row">
+                <div class="subMenu">
+                    <a href="{{ path('cabinet_pharma_statistic') }}" class="item-subMenu">РАСЧЕТ ВЫПОЛНЕНИЯ АС</a>
+                    <!--<a href='display_ntz.php' class='item-subMenu'>ВЫКЛАДКА и НТЗ</a>-->
+                    <a href="#" class="item-subMenu" style="color: grey; border-color: grey;">ВЫКЛАДКА и НТЗ</a>
+                    <a href="{{ path('cabinet_pharma_statistic_list_goods') }}" class="item-subMenu active">Список номенклатуры</a>
+                </div>
+            </div>
+            <!--  page  -->
+            <div class="row qflex">
+                <a class="nondecor" href="?period=prev">
+                    <div class="prevQ {% if reportPeriod == 'prev' %}activQ{% endif %}" data="prev">прошлый квартал</div>
+                </a>
+                <div class='quarterNum'><?php if ($quarter!='' and $year!='') echo "$quarter квартал $year г.";?></div>
+                <a class="nondecor" href="?period=curr">
+                    <div class="currQ {% if reportPeriod == 'curr' %}activQ{% endif %}" data="curr">текущий квартал</div>
+                </a>
+            </div>
+
+            <div class="row">
+                {% for item in contratList %}
+                    <a class="manuf-goods" href="{{ path('cabinet_pharma_statistic_list_goods_download', {reportPeriod: reportPeriod, manufacturer: item.manufacturer}) }}" title="Скачать">
+                        <img src="/images/excel.png" alt="Скачать"><p>{{ item.manufacturer | trim }}</p>
+                    </a>
+                {% endfor %}
+            </div>
+
+            <a class="download-all" href="{{ path('cabinet_pharma_statistic_list_goods_download', {reportPeriod: reportPeriod}) }}">
+                <img src="/images/excel2.png">
+                <p>Скачать по всем производителям</p>
+            </a>
+
+        </div>
+    </div>
+{% endblock %}

@@ -25,7 +25,7 @@ final class CabinetController extends AbstractController
 
         return $this->render('cabinet/homepage/index.html.twig', [
             'user' => $this->userService->getUser(),
-            'breadcrumbs' => $this->breadCrumbsService->getBreadCrumbs($path),
+            'pageName' => 'Главная',
         ]);
     }
 }
